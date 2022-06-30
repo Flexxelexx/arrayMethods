@@ -89,14 +89,21 @@ console.log(volgordeDatum)
 // { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 }
 // ]
 
+const langstGeleefd = inventors.sort((a,b) => {
+  const langstA = a.passed - a.year;
+  const langstB = b.passed - b.year;
+  return langstB - langstA;
+})
 
+console.log(langstGeleefd)
 
+// passed - year = uitkomst waar ik de array op wil sorteren
 
 // 6. Vind de gegevens over de uitvinder wiens achternaam 'Edison' is.
 // Verwachte uitkomst: { first: 'Thomas', last: 'Edison', year: 1847, passed: 1931 }
 //
-// const vindNaam = inventors.find((inventors) => inventors.last === 'Edison'); {
-// return
-// });
-//
-// console.log(vindNaam)
+const vindNaam = inventors.find((inventor) => {
+return inventor.last === 'Edison'
+});
+
+console.log(vindNaam)
